@@ -68,26 +68,32 @@ h3 {
 .alert {
   display: none;
   position: relative;
-  margin: -60px auto 20px auto;
+  margin: -80px auto 0px auto;
   z-index: 1;
 }
 
-.orders-placed {
+#orders-placed {
   display: none;
+  text-align: center;
 }
 
 .order-tile {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   width: 80%;
   max-width: 300px;
   height: 200px;
   box-shadow: 0px 5px 10px #4e4e4e;
   border-radius: 4px;
-  border: 1px solid #e9ecef;
+}
+
+.order-tile:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 20px #4e4e4e;
 }
 
 .order-image {
   margin: 0 auto;
+  border: 1px solid #e9ecef;
 }
 
 .order-image img {
@@ -95,9 +101,22 @@ h3 {
 }
 
 .order-name {
+  width: 100%;
   text-align: center;
   padding-top: 12px;
   background-color: lightgray;
   height: 47px;
   border-radius: 0px 0px 4px 4px;
+}
+
+.order-details {
+  margin-top: 10px;
+  display: none;
+  text-align: left;
+  border: 1px solid #e9ecef;
+  padding: 10px 5px;
+}
+
+.order-details-header {
+  border-bottom: 2px solid #4e4e4e;
 }

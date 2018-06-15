@@ -84,8 +84,21 @@ function appendOrder(pizza) {
                         "<img src='img/pizza-order.jpg' alt='An image of your pizza ordered from Pizza Time'>" +
                       "</div>" +
                       "<div class='order-name'>" + pizza.name + "</div>" +
+                      "<div class='order-details'>" +
+                        "<h5 class='order-details-header'>Order Details:</h5>" +
+                        "<p><span class='strong-text'>Name:</span> " + pizza.name + "</p>" +
+                        "<span class='strong-text'>Size:</span> " + pizza.size + "</p>" +
+                        "<span class='strong-text'>Toppings:</span> " + pizza.toppings + "</p>" +
+                      "</div>" +
                     "</div>";
   $("#orders-placed").append(uglyAppend);
+  addClickEvent();
+}
+
+function addClickEvent() {
+  $(".order-tile").click(function() {
+    $(this).children(".order-details").slideToggle(500);
+  });
 }
 
 $(document).ready(function() {
