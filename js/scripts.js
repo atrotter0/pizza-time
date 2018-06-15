@@ -40,6 +40,8 @@ Pizza.prototype.sizePrice = function() {
 
 function resetForm() {
   $("#order-form")[0].reset();
+  $("#meats-content").slideUp();
+  $("#non-meats-content").slideUp();
 }
 
 function validateAndBuild() {
@@ -75,9 +77,22 @@ function getToppings() {
 function displayOrders(pizza) {
   $("#order-box").hide();
   $("#orders-placed").fadeIn(2000);
-  $("#add-order").show().on("click");
+  activateAddBtn();
   displayAlert("Thank you for your order, " + pizza.name + ". Our pizza delivery drone is on it's way!");
   appendOrder(pizza);
+}
+
+function showOrderForm(btn) {
+  $(btn).fadeToggle().off("click");
+  $("#orders-placed").hide();
+  $("#order-box").fadeIn(1000);
+  resetForm();
+}
+
+function activateAddBtn() {
+  $("#add-order").show().click(function(){
+    showOrderForm(this);
+  });
 }
 
 function displayAlert(msg) {
@@ -99,10 +114,10 @@ function appendOrder(pizza) {
                       "</div>" +
                     "</div>";
   $("#orders-placed").append(uglyAppend);
-  addClickEvent();
+  addTileClick();
 }
 
-function addClickEvent() {
+function addTileClick() {
   $(".order-tile").unbind();
   $(".order-tile").click(function() {
     $(this).children(".order-details").slideToggle(500);
@@ -110,11 +125,8 @@ function addClickEvent() {
 }
 
 $(document).ready(function() {
-  $("#order-now, #add-order").click(function() {
-    $(this).fadeToggle().off("click");
-    $("#orders-placed").hide();
-    $("#order-box").fadeIn(1000);
-    resetForm();
+  $("#order-now").click(function() {
+    showOrderForm(this);
   });
 
   $("#clear-order").click(function() {
