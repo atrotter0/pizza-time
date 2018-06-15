@@ -2,6 +2,10 @@ button:focus {
   outline: none;
 }
 
+#add-order {
+  display: none;
+}
+
 #order-box {
   display: none;
 }
@@ -104,7 +108,8 @@ h3 {
   width: 100%;
   text-align: center;
   padding-top: 12px;
-  background-color: lightgray;
+  background-color: #d4f2f5;
+  color: #155724;
   height: 47px;
   border-radius: 0px 0px 4px 4px;
 }
@@ -115,8 +120,14 @@ h3 {
   text-align: left;
   border: 1px solid #e9ecef;
   padding: 10px 5px;
+  z-index: 1;
+  background-color: #fff;
 }
 
 .order-details-header {
   border-bottom: 2px solid #4e4e4e;
+}
+
+.strong-text {
+  font-weight: bold;
 }

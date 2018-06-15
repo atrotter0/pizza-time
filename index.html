@@ -14,6 +14,7 @@
       <h1>Pizza Time</h1>
       <p>The world's fastest drone-delivered, organic, gourmet pizzas! Click below to begin your order. Your fresh, mouth-watering pie is only minutes away.</p>
       <button type="button" class="btn btn-success btn-lg" id="order-now">Order Now</button>
+      <button type="button" class="btn btn-success btn-lg" id="add-order">Add Order</button>
     </div>
     <div id="order-box">
       <!-- order form -->
@@ -35,9 +36,9 @@
             </div>
             <select class="custom-select lg-input" id="pizza-size" required>
               <option selected value="">Choose...</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
             </select>
           </div>
         </div>
@@ -171,11 +172,11 @@
         <button type="submit" class="btn btn-success btn-lg" id="place-order">Place Order</button>
         <button type="button" class="btn btn-secondary btn-lg" id="clear-order">Clear Order</button>
       </form>
-      <!-- orders placed -->
-      <div id="orders-placed">
-        <div class="alert alert-success" role="alert"></div>
-        <h3>Recent Orders:</h3>
-      </div>
+    </div>
+    <!-- orders placed -->
+    <div id="orders-placed">
+      <div class="alert alert-success" role="alert"></div>
+      <h3>Recent Orders:</h3>
     </div>
   </div>
 </body>

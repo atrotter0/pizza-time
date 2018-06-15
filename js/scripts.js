@@ -7,6 +7,7 @@ function Pizza(name, size, toppings) {
 
 Pizza.prototype.calculatePrice = function() {
   this.price = this.sizePrice() +  this.toppingsCost();
+  this.price = "$" + this.price.toString();
 }
 
 Pizza.prototype.toppingsCost = function() {
@@ -28,13 +29,17 @@ Pizza.prototype.costPerTopping = function() {
 }
 
 Pizza.prototype.sizePrice = function() {
-  if (this.size === "small") {
+  if (this.size === "Small") {
     return 14;
-  } else if (this.size === "medium") {
+  } else if (this.size === "Medium") {
     return 18;
-  } else if (this.size === "large") {
+  } else if (this.size === "Large") {
     return 20;
   }
+}
+
+function resetForm() {
+  $("#order-form")[0].reset();
 }
 
 function validateAndBuild() {
@@ -68,9 +73,10 @@ function getToppings() {
 }
 
 function displayOrders(pizza) {
-  $("#order-form").hide();
+  $("#order-box").hide();
   $("#orders-placed").fadeIn(2000);
-  displayAlert("Thank you for placing your order. Our pizza delivery drone is on it's way!");
+  $("#add-order").show().on("click");
+  displayAlert("Thank you for your order, " + pizza.name + ". Our pizza delivery drone is on it's way!");
   appendOrder(pizza);
 }
 
@@ -88,7 +94,8 @@ function appendOrder(pizza) {
                         "<h5 class='order-details-header'>Order Details:</h5>" +
                         "<p><span class='strong-text'>Name:</span> " + pizza.name + "</p>" +
                         "<span class='strong-text'>Size:</span> " + pizza.size + "</p>" +
-                        "<span class='strong-text'>Toppings:</span> " + pizza.toppings + "</p>" +
+                        "<span class='strong-text'>Toppings:</span> " + pizza.toppings.join(", ") + "</p>" +
+                        "<span class='strong-text'>Price:</span> " + pizza.price + "</p>" +
                       "</div>" +
                     "</div>";
   $("#orders-placed").append(uglyAppend);
@@ -96,19 +103,22 @@ function appendOrder(pizza) {
 }
 
 function addClickEvent() {
+  $(".order-tile").unbind();
   $(".order-tile").click(function() {
     $(this).children(".order-details").slideToggle(500);
   });
 }
 
 $(document).ready(function() {
-  $("#order-now").click(function() {
+  $("#order-now, #add-order").click(function() {
     $(this).fadeToggle().off("click");
-    $("#order-box").fadeToggle(1000);
+    $("#orders-placed").hide();
+    $("#order-box").fadeIn(1000);
+    resetForm();
   });
 
   $("#clear-order").click(function() {
-    $("#order-form")[0].reset();
+    resetForm();
   });
 
   $("#order-form").submit(function(e) {

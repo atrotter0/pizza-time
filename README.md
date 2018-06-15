@@ -18,7 +18,8 @@ A simple application to mimic ordering pizzas online. Built with JavaScript, jQu
 | Program has set price for Small (14), Medium (18), and Large (20) pizzas | Size: Small | Price: $14 |
 | Program has set price for each additional topping after toppings limit (3) | Toppings: Extra Cheese, Pepperoni, Pineapple, Tomatoes | Add $2 per extra topping |
 | Program determines cost of pizza based on size and toppings | Size: Small, Toppings: 4 | Price: $16 |
-| Program thanks the user and says their order will be ready shortly when order is placed | Order placed | "Thank you, your order will be ready shortly!" |
+| Program thanks the user and says their order will be ready shortly when order is placed | Order placed | "Thank you for your order, {name}. Our pizza delivery drone is on it's way!" |
+| Program allows user to view orders that have been placed | Order placed | Ability to click and view order details |
 
 ## Setup/Contribution Requirements
 
@@ -31,7 +32,7 @@ A simple application to mimic ordering pizzas online. Built with JavaScript, jQu
 
 * HTML/CSS
 * JavaScript
-* Bootstrap 3.3.7
+* Bootstrap 4.0.0
 * jQuery 3.3.1
 
 ## Links
