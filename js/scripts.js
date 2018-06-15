@@ -37,25 +37,49 @@ Pizza.prototype.sizePrice = function() {
   }
 }
 
+function validateFields() {
+  if (validate("#name") && validate("#pizza-size")) {
+    buildPizzaOrder();
+  } else { 
+    alert("Stop trying to break things...");
+  }
+}
+
+function validate(id) {
+  if ($(id).val() !== "") return true;
+}
+
+function buildPizzaOrder() {
+  var name = $("#name").val();
+  var size = $("#pizza-size").val();
+  var toppings = getToppings();
+  var pizza = new Pizza(name, size, toppings);
+  pizza.calculatePrice();
+  console.log(pizza);
+}
+
 function getToppings() {
   var list = [];
   $("input:checked").each(function(index, topping) {
     list.push(topping.value);
   });
-  console.log(list);
   return list;
 }
 
 $(document).ready(function() {
-  $("#place-order").click(function(e) {
+  $("#order-now").click(function() {
+    $(this).fadeToggle();
+    $("#order-box").fadeToggle(1000);
+  });
+
+  $("#order-form").submit(function(e) {
     e.preventDefault();
 
-    var name = $("#name").val();
-    var size = $("#pizza-size").val();
-    var toppings = getToppings();
-    var pizza = new Pizza(name, size, toppings);
-    pizza.calculatePrice();
-    console.log(pizza);
+    validateFields();
+  });
+
+  $("#confirm-order").click(function() {
+
   });
 
   $("#meats").click(function() {

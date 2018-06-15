@@ -2,8 +2,16 @@ button:focus {
   outline: none;
 }
 
+#order-box {
+  display: none;
+}
+
 h3 {
   margin: 20px 0px;
+}
+
+#order-form {
+  margin-bottom: 30px;
 }
 
 .fixed-span-width {

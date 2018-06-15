@@ -13,7 +13,7 @@
     <div class="jumbotron">
       <h1>Pizza Time</h1>
       <p>The world's fastest drone-delivered, organic, gourmet pizzas! Click the button below to begin your order. Your fresh, mouth-watering pie is only a few clicks away.</p>
-      <button type="button" class="btn btn-success btn-lg" id="start-order">Order Now</button>
+      <button type="button" class="btn btn-success btn-lg" id="order-now">Order Now</button>
     </div>
     <div id="order-box">
       <form id="order-form">
@@ -23,7 +23,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text fixed-span-width" id="inputGroup-sizing-lg">Name:</span>
             </div>
-            <input type="text" id="name" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" id="name" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" required>
           </div>
         </div>
         <div class="form-group" id="size-group">
@@ -32,7 +32,7 @@
             <div class="input-group-prepend">
               <label class="input-group-text fixed-span-width" for="pizza-size">Size:</label>
             </div>
-            <select class="custom-select lg-input" id="pizza-size">
+            <select class="custom-select lg-input" id="pizza-size" required>
               <option selected value="">Choose...</option>
               <option value="small">Small</option>
               <option value="medium">Medium</option>
@@ -167,7 +167,7 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn btn-success btn-lg" id="place-order">Place Order</button>
+        <button type="submit" class="btn btn-success btn-lg" id="place-order">Place Order</button>
       </form>
     </div>
   </div>
