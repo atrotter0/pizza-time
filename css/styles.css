@@ -148,7 +148,7 @@ h3 {
 /* responsive styles */
 @media screen and (max-width: 602px) {
   .alert {
-    margin-top: -32px;
+    margin-top: -38px;
   }
 }
 
