@@ -62,7 +62,6 @@ function buildPizzaOrder() {
   var toppings = getToppings();
   var pizza = new Pizza(name, size, toppings);
   pizza.calculatePrice();
-  console.log(pizza);
   displayOrders(pizza);
 }
 
