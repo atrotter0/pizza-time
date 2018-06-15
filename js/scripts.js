@@ -56,6 +56,7 @@ function buildPizzaOrder() {
   var pizza = new Pizza(name, size, toppings);
   pizza.calculatePrice();
   console.log(pizza);
+  displayOrders(pizza);
 }
 
 function getToppings() {
@@ -64,6 +65,27 @@ function getToppings() {
     list.push(topping.value);
   });
   return list;
+}
+
+function displayOrders(pizza) {
+  $("#order-form").hide();
+  $("#orders-placed").fadeIn(2000);
+  displayAlert("Thank you for placing your order. Our pizza delivery drone is on it's way!");
+  appendOrder(pizza);
+}
+
+function displayAlert(msg) {
+  $(".alert").text(msg).fadeIn(2000).delay(5000).fadeOut(800);
+}
+
+function appendOrder(pizza) {
+  var uglyAppend =  "<div class='order-tile'>" +
+                      "<div class='order-image'>" +
+                        "<img src='img/pizza-order.jpg' alt='An image of your pizza ordered from Pizza Time'>" +
+                      "</div>" +
+                      "<div class='order-name'>" + pizza.name + "</div>" +
+                    "</div>";
+  $("#orders-placed").append(uglyAppend);
 }
 
 $(document).ready(function() {
@@ -80,10 +102,6 @@ $(document).ready(function() {
     e.preventDefault();
 
     validateAndBuild();
-  });
-
-  $("#confirm-order").click(function() {
-
   });
 
   $("#meats").click(function() {
