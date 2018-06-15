@@ -6,9 +6,13 @@ function Pizza(name, size, toppings) {
 }
 
 Pizza.prototype.calculatePrice = function() {
+  this.price = this.sizePrice() +  this.toppingsCost();
+}
+
+Pizza.prototype.toppingsCost = function() {
   var toppingsToBuy = this.toppingsCount() - this.toppingsLimit();
-  var sizePrice = this.sizePrice();
-  this.price = sizePrice + (this.toppingsCost() * toppingsToBuy);
+  if (toppingsToBuy > 0) return toppingsToBuy * this.costPerTopping();
+  return 0;
 }
 
 Pizza.prototype.toppingsCount = function() {
@@ -19,7 +23,7 @@ Pizza.prototype.toppingsLimit = function() {
   return 3;
 }
 
-Pizza.prototype.toppingsCost = function() {
+Pizza.prototype.costPerTopping = function() {
   return 2;
 }
 
@@ -28,7 +32,7 @@ Pizza.prototype.sizePrice = function() {
     return 14;
   } else if (this.size === "medium") {
     return 18;
-  } else {
+  } else if (this.size === "large") {
     return 20;
   }
 }
@@ -50,6 +54,7 @@ $(document).ready(function() {
     var size = $("#pizza-size").val();
     var toppings = getToppings();
     var pizza = new Pizza(name, size, toppings);
+    pizza.calculatePrice();
     console.log(pizza);
   });
 
