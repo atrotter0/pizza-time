@@ -8,6 +8,28 @@ button:focus {
   font-size: 1.25rem;
 }
 
+.toppings-accordion {
+
+}
+
+.toppings-accordion-header {
+  height: 50px;
+  padding-left: 15px;
+  padding-top: 10px;
+  background-color: #e9ecef;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.toppings-accordion-header:hover {
+  cursor: pointer;
+}
+
+.toppings-accordion-body {
+  display: none;
+}
+
 .radio-with-height {
   height: 40px;
 }
@@ -17,4 +39,8 @@ button:focus {
   font-size: 1.25rem;
   padding-left: 10px;
   color: #495057;
+}
+
+.toppings-label:hover, .radio-with-height:hover, input[type="checkbox"]:hover {
+  cursor: pointer;
 }

@@ -5,4 +5,8 @@ function Pizza() {
 
 $(document).ready(function() {
   console.log("Working...");
+
+  $("#meats").click(function() {
+    $(".toppings-accordion-body").slideToggle(900);
+  });
 });
