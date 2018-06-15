@@ -106,7 +106,7 @@ function appendOrder(pizza) {
                       "</div>" +
                       "<div class='order-name'>" + pizza.name + "</div>" +
                       "<div class='order-details'>" +
-                        "<h5 class='order-details-header'>Order Details:</h5>" +
+                        "<h5 class='order-details-header lt-text-shadow'>Order Details:</h5>" +
                         "<p><span class='strong-text'>Name:</span> " + pizza.name + "</p>" +
                         "<span class='strong-text'>Size:</span> " + pizza.size + "</p>" +
                         "<span class='strong-text'>Toppings:</span> " + pizza.toppings.join(", ") + "</p>" +
