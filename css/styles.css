@@ -69,6 +69,10 @@ h3 {
   cursor: pointer;
 }
 
+.bottom-btn {
+  margin-top: 20px;
+}
+
 .alert {
   display: none;
   position: relative;
