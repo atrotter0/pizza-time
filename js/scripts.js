@@ -82,17 +82,17 @@ function displayOrders(pizza) {
   appendOrder(pizza);
 }
 
+function activateAddBtn() {
+  $("#add-order").show().click(function(){
+    showOrderForm(this);
+  });
+}
+
 function showOrderForm(btn) {
   $(btn).fadeToggle().off("click");
   $("#orders-placed").hide();
   $("#order-box").fadeIn(1000);
   resetForm();
-}
-
-function activateAddBtn() {
-  $("#add-order").show().click(function(){
-    showOrderForm(this);
-  });
 }
 
 function displayAlert(msg) {
