@@ -37,10 +37,10 @@ Pizza.prototype.sizePrice = function() {
   }
 }
 
-function validateFields() {
+function validateAndBuild() {
   if (validate("#name") && validate("#pizza-size")) {
     buildPizzaOrder();
-  } else { 
+  } else {
     alert("Stop trying to break things...");
   }
 }
@@ -68,14 +68,18 @@ function getToppings() {
 
 $(document).ready(function() {
   $("#order-now").click(function() {
-    $(this).fadeToggle();
+    $(this).fadeToggle().off("click");
     $("#order-box").fadeToggle(1000);
+  });
+
+  $("#clear-order").click(function() {
+    $("#order-form")[0].reset();
   });
 
   $("#order-form").submit(function(e) {
     e.preventDefault();
 
-    validateFields();
+    validateAndBuild();
   });
 
   $("#confirm-order").click(function() {
