@@ -2,6 +2,10 @@ button:focus {
   outline: none;
 }
 
+.fixed-span-width {
+  width: 90px;
+}
+
 .lg-input {
   height: 50px;
   padding: .5rem 1rem;
