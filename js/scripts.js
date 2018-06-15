@@ -1,5 +1,6 @@
-function Pizza(name, size, toppings) {
+function Pizza(name, address, size, toppings) {
   this.name = name;
+  this.address = address;
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
@@ -45,7 +46,7 @@ function resetForm() {
 }
 
 function validateAndBuild() {
-  if (validate("#name") && validate("#pizza-size")) {
+  if (validate("#name") && validate("#pizza-size") && validate("#address")) {
     buildPizzaOrder();
   } else {
     alert("Stop trying to break things...");
@@ -58,9 +59,10 @@ function validate(id) {
 
 function buildPizzaOrder() {
   var name = $("#name").val();
+  var address = $("#address").val();
   var size = $("#pizza-size").val();
   var toppings = getToppings();
-  var pizza = new Pizza(name, size, toppings);
+  var pizza = new Pizza(name, address, size, toppings);
   pizza.calculatePrice();
   displayOrders(pizza);
 }
@@ -107,6 +109,7 @@ function appendOrder(pizza) {
                       "<div class='order-details'>" +
                         "<h5 class='order-details-header lt-text-shadow'>Order Details:</h5>" +
                         "<p><span class='strong-text'>Name:</span> " + pizza.name + "</p>" +
+                        "<p><span class='strong-text'>Address:</span> " + pizza.address + "</p>" +
                         "<span class='strong-text'>Size:</span> " + pizza.size + "</p>" +
                         "<span class='strong-text'>Toppings:</span> " + pizza.toppings.join(", ") + "</p>" +
                         "<span class='strong-text'>Price:</span> " + pizza.price + "</p>" +
