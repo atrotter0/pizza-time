@@ -12,7 +12,13 @@ A simple application to order pizzas. Built with JavaScript, jQuery, and Bootstr
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-| {behavior} | {input} | {output} |
+| Program allows user to select size of pizza | Size: Small | Small |
+| Program allows user to select toppings on pizza | Toppings: Extra Cheese, Pepperoni | Extra Cheese, Pepperoni  |
+| Program allows user to select 3 toppings for free | Toppings: Extra Cheese, Pepperoni, Pineapple | Add $0 |
+| Program has set price for Small (14), Medium (18), and Large (20) pizzas | Size: Small | Price: $14 |
+| Program has set price for each additional toppings after toppings limit (3) | Toppings: Extra Cheese, Pepperoni, Pineapple, Tomatoes | Add $2 per extra topping |
+| Program determines cost of pizza based on size and toppings | Size: Small, Toppings: 4 | Price: $16 |
+| Program thanks the user and says their order will be ready shortly when order is placed | Order placed | "Thank you, your order will be ready shortly!" |
 
 ## Setup/Contribution Requirements
 
