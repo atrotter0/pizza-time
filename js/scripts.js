@@ -7,6 +7,10 @@ $(document).ready(function() {
   console.log("Working...");
 
   $("#meats").click(function() {
-    $(".toppings-accordion-body").slideToggle(900);
+    $("#meats-content").slideToggle(900);
+  });
+
+  $("#non-meats").click(function() {
+    $("#non-meats-content").slideToggle(900);
   });
 });

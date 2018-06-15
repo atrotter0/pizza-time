@@ -9,10 +9,10 @@ button:focus {
 }
 
 .toppings-accordion {
-
 }
 
 .toppings-accordion-header {
+  box-shadow: 2px 2px 5px #bfbebe;
   height: 50px;
   padding-left: 15px;
   padding-top: 10px;
@@ -20,14 +20,18 @@ button:focus {
   font-size: 1.25rem;
   margin-bottom: 20px;
   border-radius: 4px;
+  transition: 0.2s;
 }
 
 .toppings-accordion-header:hover {
   cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 3px 3px 5px #8e8d8d;
 }
 
 .toppings-accordion-body {
   display: none;
+  margin-bottom: 20px;
 }
 
 .radio-with-height {
