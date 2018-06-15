@@ -4,5 +4,5 @@ function Pizza() {
 }
 
 $(document).ready(function() {
-  $("#")
+  console.log("Working...");
 });

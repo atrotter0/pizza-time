@@ -1,3 +1,20 @@
 button:focus {
   outline: none;
 }
+
+.lg-input {
+  height: 50px;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+}
+
+.radio-with-height {
+  height: 40px;
+}
+
+.toppings-label {
+  line-height: 40px;
+  font-size: 1.25rem;
+  padding-left: 10px;
+  color: #495057;
+}

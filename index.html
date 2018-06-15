@@ -13,19 +13,40 @@
     <div class="jumbotron">
       <h1>Pizza Time</h1>
       <p>The world's fastest drone-delivered, gourmet pizzas! Click the button below to begin your order. Your fresh, mouth-watering pie is only a few clicks away.</p>
-      <button type="button" class="btn btn-secondary btn-lg" id="start-order">Order Now</button>
+      <button type="button" class="btn btn-success btn-lg" id="start-order">Order Now</button>
     </div>
     <div id="order-box">
       <form id="order-form">
         <div class="form-group" id="name-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" class="form-control" maxLength="20">
+          <h3>Enter a Name for Your Order</h3>
+          <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Name:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
         </div>
         <div class="form-group" id="size-group">
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary btn-size" id="small">Small</button>
-            <button type="button" class="btn btn-secondary btn-size" id="medium">Medium</button>
-            <button type="button" class="btn btn-secondary btn-size" id="large">Large</button>
+          <h3>Select a Size</h3>
+          <div class="input-group mb-3 input-group-lg">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Size:</label>
+            </div>
+            <select class="custom-select lg-input" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" id="toppings-group">
+          <h3>Select Your Toppings</h3>
+          <div class="input-group-prepend">
+            <div class="input-group-text radio-with-height">
+              <input type="checkbox" id="pepperoni">
+            </div>
+            <label class="toppings-label" for="pepperoni">Pepperoni</label>
           </div>
         </div>
       </form>
