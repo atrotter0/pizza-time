@@ -12,7 +12,7 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Pizza Time</h1>
-      <p>The world's fastest drone-delivered, gourmet pizzas! Click the button below to begin your order. Your fresh, mouth-watering pie is only a few clicks away.</p>
+      <p>The world's fastest drone-delivered, organic, gourmet pizzas! Click the button below to begin your order. Your fresh, mouth-watering pie is only a few clicks away.</p>
       <button type="button" class="btn btn-success btn-lg" id="start-order">Order Now</button>
     </div>
     <div id="order-box">
@@ -23,17 +23,17 @@
             <div class="input-group-prepend">
               <span class="input-group-text fixed-span-width" id="inputGroup-sizing-lg">Name:</span>
             </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" id="name" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
           </div>
         </div>
         <div class="form-group" id="size-group">
           <h3>Select a Size</h3>
           <div class="input-group mb-3 input-group-lg">
             <div class="input-group-prepend">
-              <label class="input-group-text fixed-span-width" for="inputGroupSelect01">Size:</label>
+              <label class="input-group-text fixed-span-width" for="pizza-size">Size:</label>
             </div>
-            <select class="custom-select lg-input" id="inputGroupSelect01">
-              <option selected>Choose...</option>
+            <select class="custom-select lg-input" id="pizza-size">
+              <option selected value="">Choose...</option>
               <option value="small">Small</option>
               <option value="medium">Medium</option>
               <option value="large">Large</option>
@@ -48,49 +48,49 @@
             <div class="toppings-accordion-body" id="meats-content">
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="pepperoni">
+                  <input type="checkbox" id="pepperoni" value="Pepperoni">
                 </div>
                 <label class="toppings-label" for="pepperoni">Pepperoni</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="beef">
+                  <input type="checkbox" id="beef" value="Beef">
                 </div>
                 <label class="toppings-label" for="beef">Beef</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="ham">
+                  <input type="checkbox" id="ham" value="Ham">
                 </div>
                 <label class="toppings-label" for="ham">Ham</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="salami">
+                  <input type="checkbox" id="salami" value="Salami">
                 </div>
                 <label class="toppings-label" for="salami">Salami</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="italian-sausage">
+                  <input type="checkbox" id="italian-sausage" value="Italian Sausage">
                 </div>
                 <label class="toppings-label" for="italian-sausage">Italian Sausage</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="philly-steak">
+                  <input type="checkbox" id="philly-steak" value="Philly Steak">
                 </div>
                 <label class="toppings-label" for="philly-steak">Philly Steak</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="bacon">
+                  <input type="checkbox" id="bacon" value="Bacon">
                 </div>
                 <label class="toppings-label" for="bacon">Bacon</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="chicken">
+                  <input type="checkbox" id="chicken" value="Chicken">
                 </div>
                 <label class="toppings-label" for="chicken">Chicken</label>
               </div>
@@ -100,67 +100,67 @@
             <div class="toppings-accordion-body" id="non-meats-content">
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="onions">
+                  <input type="checkbox" id="onions" value="Onions">
                 </div>
                 <label class="toppings-label" for="onions">Onions</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="mushrooms">
+                  <input type="checkbox" id="mushrooms" value="Mushrooms">
                 </div>
                 <label class="toppings-label" for="mushrooms">Mushrooms</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="tomatoes">
+                  <input type="checkbox" id="tomatoes" value="Tomatoes">
                 </div>
                 <label class="toppings-label" for="tomatoes">Tomatoes</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="cheddar-cheese">
+                  <input type="checkbox" id="cheddar-cheese" value="Cheddar Cheese">
                 </div>
                 <label class="toppings-label" for="cheddar-cheese">Cheddar Cheese</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="shredded-parmesan">
+                  <input type="checkbox" id="shredded-parmesan" value="Shredded Parmesan Asiago">
                 </div>
                 <label class="toppings-label" for="shredded-parmesan">Shredded Parmesan Asiago</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="black-olives">
+                  <input type="checkbox" id="black-olives" value="Black Olives">
                 </div>
                 <label class="toppings-label" for="black-olives">Black Olives</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="jalapeno-peppers">
+                  <input type="checkbox" id="jalapeno-peppers" value="Jalapeno Peppers">
                 </div>
                 <label class="toppings-label" for="jalapeno-peppers">Jalapeno Peppers</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="pineapple">
+                  <input type="checkbox" id="pineapple" value="Pineapple">
                 </div>
                 <label class="toppings-label" for="pineapple">Pineapple</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="red-peppers">
+                  <input type="checkbox" id="red-peppers" value="Roasted Red Peppers">
                 </div>
                 <label class="toppings-label" for="red-peppers">Roasted Red Peppers</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="green-peppers">
+                  <input type="checkbox" id="green-peppers" value="Green Peppers">
                 </div>
                 <label class="toppings-label" for="green-peppers">Green Peppers</label>
               </div>
               <div class="input-group-prepend">
                 <div class="input-group-text radio-with-height">
-                  <input type="checkbox" id="spinach">
+                  <input type="checkbox" id="spinach" value="Spinach">
                 </div>
                 <label class="toppings-label" for="spinach">Spinach</label>
               </div>
